@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 import sys
 import argparse
 from src.vtt_emotion_scorer import VTTEmotionScorer
@@ -18,6 +19,8 @@ def main():
         sys.exit('No input file was provided')
     if args["file"].endswith(".vtt") == False:
         sys.exit('Only VTT files are accepted')
+    if os.path.isfile(args["file"]) == False:
+        sys.exit('Input file does not exist')
     if args["output"] == None:
         sys.exit('No output file name was provided')
     if args["output"].endswith(".png") == False:
