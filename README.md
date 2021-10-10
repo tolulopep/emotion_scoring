@@ -25,4 +25,4 @@ python -m unittest test.test_vtt_emotion_scorer
 ```
 
 ## Demo
-![demo](screen-capture.gif)
+![demo](demo.gif)
