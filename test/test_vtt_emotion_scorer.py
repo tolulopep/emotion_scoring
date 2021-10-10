@@ -17,9 +17,11 @@ class TestVTTEmotionScorer(unittest.TestCase):
             VTTEmotionScorer("README.md")
 
     def test_successful_execution(self):
-        scores, end_times = VTTEmotionScorer(TestVTTEmotionScorer.input_file).extract_emotion_scores_and_end_times()
+        scores, end_times = VTTEmotionScorer(
+            TestVTTEmotionScorer.input_file).extract_emotion_scores_and_end_times()
         for key in scores:
-                assert len(scores[key]) == len(end_times)
-        
+            assert len(scores[key]) == len(end_times)
+
+
 if __name__ == '__main__':
     unittest.main()
